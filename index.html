@@ -11,6 +11,7 @@
 <script src="particles.js"></script>
 
 <div id="main">
+
   <div id="nameContainer">
 
     <div id="name">Krzysztof Ta&#322;a&#322;aj</div>
@@ -24,45 +25,74 @@
 
   </div>
 
-
-  <div id="pages">
-    <ul id="pages-menu">
-      <a id="page-one" href="#one">About Me</a>
-      <a id="page-two" href="#two">Passions</a>
-      <a id="page-three" href="#three">Maze Creator</a>
+  <div id="menuContainer">
+    <ul>
+      <a onclick="openMenu(event, 'description');" id="firstpage">
+        <div class="page active">About Me</div>
+      </a>
+      <a onclick="openMenu(event, 'passions');">
+        <div class="page">My Passions</div>
+      </a>
+      <a onclick="openMenu(event, 'project');">
+        <div class="page">Maze Creator</div>
+      </a>
     </ul>
 
-    <section id="page">introduction</section>
+    <div id="description" class="menu">description</div>
+    <div id="passions" class="menu">passions</div>
+    <div id="project" class="menu">project</div>
   </div>
 
   <div id="language" onclick="toggleLanguage()"><a href="#">English</a></div>
+  
   <div id="development">Currently in development -</div>
+
 </div>
 </body>
 
 <script>
-particlesJS.load('particles-js', 'particles.json');
-
 window.onload = () => {
+  particlesJS.load('particles-js', 'particles.json');
   document.getElementById('development').innerText += ` ${new Date().getFullYear()}`;
-  toggleLanguage();
+  document.getElementById("language").click();
+  document.getElementById("firstpage").click();
 };
 
 function toggleLanguage() {
   let about = document.getElementById('about');
-  let introduction = document.getElementById('introduction');
+  let description = document.getElementById('description');
+  let passions = document.getElementById("passions");
+  let project = document.getElementById("project");
   let language = document.getElementById("language");
 
   if (language.innerText == 'English') {
     about.innerHTML = 'Student informatyki algorytmicznej na Politechnice Wroc&#322;awskiej';
-    introduction.innerHTML = '<p>hej</p><p>hola</p><p>hop</p>';
+    description.innerHTML = 'hej polska - tba';
+    passions.innerHTML = 'hula polska - tba';
+    project.innerHTML = 'hop polska - tba';
     language.innerText = 'Polski';
   }
   else {
     about.innerHTML = 'IT student at Wroc&#322;aw University of Science and Technology.';
-    introduction.innerHTML = '<p>hej</p><p>hola</p><p>hop</p>';
+    description.innerHTML = 'hej england - tba';
+    passions.innerHTML = 'hula england - tba';
+    project.innerHTML = 'hop england - tba';
     language.innerText = 'English';
   }
+}
+
+function openMenu(evt, menuName) {
+  var i, x, pages;
+  x = document.getElementsByClassName("menu");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+  }
+  pages = document.getElementsByClassName("page");
+  for (i = 0; i < x.length; i++) {
+    pages[i].className = pages[i].className.replace("active", "");
+  }
+  document.getElementById(menuName).style.display = "block";
+  evt.currentTarget.firstElementChild.className += " active";
 }
 </script>
 
