@@ -74,8 +74,8 @@ if (!isMobileDevice()) {
 else { 
   document.getElementById("particles-js").style.display = "none";
   let cnvs = document.getElementById('cnvs');
-  cnvs.width = screen.width;
-  cnvs.height = screen.height;
+  cnvs.width = screen.width * 3;
+  cnvs.height = screen.height * 3;
   let ctx = cnvs.getContext('2d');
 
   let particles = new Array(50);
