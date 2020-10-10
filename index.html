@@ -120,7 +120,7 @@ function isMobileDevice() {
     return check;
 };
 
-if (!isMobileDevice()) {
+if (!isMobileDevice() || true) {
   document.getElementById("cnvs").style.display = "none";
   particlesJS.load('particles-js', 'particles/particles.json'); }
 else { 
