@@ -1,58 +1,110 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="utf-8">
-  <title>Krzysztof Ta&#322;a&#322;aj</title>
-  <link rel="stylesheet" href="style.css">
-</head>
+<title>Krzysztof Tałałaj</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata">
+
+<style>
+.bgimg {
+  background-position: center;
+  background-size: cover;
+  background-image: url("/w3images/coffeehouse.jpg");
+  min-height: 75%;
+}
+
+.menu {
+  display: none;
+}
+
+#main, * {
+  z-index: 1;
+  background-color: transparent;
+}
+
+#particles-js, #cnvs {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #000000;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 50%;
+  z-index: 0;
+}
+</style>
 
 <body>
-<div id="particles-js"></div>
-<canvas id="cnvs"></canvas>
-<script src="particles/particles.js"></script>
+  <div id="particles-js"></div>
+  <script src="particles/particles.js"></script>
 
-<script src="particleloop/perlin.js"></script>
-<script src="particleloop/particle.js"></script>
-<script src="particleloop/noiseLoop.js"></script>
+  <canvas id="cnvs"></canvas>
+  <script src="particleloop/perlin.js"></script>
+  <script src="particleloop/particle.js"></script>
+  <script src="particleloop/noiseLoop.js"></script>
 
-<div id="main">
+  <div id="main">
+    <!-- Links (sit on top) -->
+    <div class="w3-top">
+      <div class="w3-row w3-padding w3-transparent">
+        <div class="w3-col s3">
+          <a onclick="openMenu(event, 'Home');" style="color: #FFFFFF" id="myLink">
+            <div class="w3-button w3-block tablink">Home</div>
+          </a>
+        </div>
+        <div class="w3-col s3">
+          <a onclick="openMenu(event, 'About');">
+            <div class="w3-button w3-block tablink" style="color: #FFFFFF">About Me</div>
+          </a>
+        </div>
+        <div class="w3-col s3">
+          <a onclick="openMenu(event, 'Passions');">
+            <div class="w3-button w3-block tablink" style="color: #FFFFFF">My Passions</div>
+          </a>
+        </div>
+        <div class="w3-col s3">
+          <a onclick="openMenu(event, 'Projects');">
+            <div class="w3-button w3-block tablink" style="color: #FFFFFF">Maze Creator</div>
+          </a>
+        </div>
+      </div>
+    </div>
 
-  <div id="nameContainer">
+    <!-- Add a background color and large text to the whole page -->
+    <div class="w3-transparent w3-grayscale w3-large">
 
-    <div id="name">Krzysztof Ta&#322;a&#322;aj</div>
-    <div id="about">about</div>
+    <!-- Menu Container -->
+    <div class="w3-container" id="menu">
+      <div class="w3-content" style="max-width:700px">
+    
+        <div id="Home" style="color: #FFFFFF" class="w3-container menu w3-padding-48 w3-card">       
+        home 
+        </div>
 
-    <ul id="icons">
-      <li><a href="https://github.com/KrzysztofT415" target="_blank"><img src="assets/github.svg"/></a></li>
-      <li><a href="https://www.linkedin.com/in/krzysztoftalalaj" target="_bottom"><img src="assets/linkedin.svg"/></a></li>
-      <li><a href="ailto:krzysztoft415@gmail.com" target="_top"><img src="assets/email.svg"/></a></li>
-    </ul>
+        <div id="About" style="color: #FFFFFF" class="w3-container menu w3-padding-48 w3-card">
+        about
+        </div>  
 
+        <div id="Passions" style="color: #FFFFFF" class="w3-container menu w3-padding-48 w3-card">
+        passions
+        </div>  
+
+        <div id="Projects" style="color: #FFFFFF" class="w3-container menu w3-padding-48 w3-card">
+        projects
+        </div>  
+      </div>
+    </div>
+
+    <!-- End page content -->
+    </div>
+
+    <!-- Footer -->
+    <footer class="w3-center w3-light-grey w3-padding-48 w3-large">
+      <p id="copyright">Copyright © Krzysztof Tałałaj</p>
+      <p>Currently in development</p>
+    </footer>
   </div>
-
-  <div id="menuContainer">
-    <ul>
-      <a onclick="openMenu(event, 'description');" id="firstpage">
-        <div class="page active">About Me</div>
-      </a>
-      <a onclick="openMenu(event, 'passions');">
-        <div class="page">My Passions</div>
-      </a>
-      <a onclick="openMenu(event, 'project');">
-        <div class="page">Maze Creator</div>
-      </a>
-    </ul>
-
-    <div id="description" class="menu">description</div>
-    <div id="passions" class="menu">passions</div>
-    <div id="project" class="menu">project</div>
-  </div>
-
-  <div id="language" onclick="toggleLanguage()"><a href="#">English</a></div>
-  
-  <div id="development">Currently in development -</div>
-
-</div>
 </body>
 
 <script>
@@ -132,19 +184,21 @@ function toggleLanguage() {
   }
 }
 
+// Tabbed Menu
 function openMenu(evt, menuName) {
-  var i, x, pages;
+  var i, x, tablinks;
   x = document.getElementsByClassName("menu");
   for (i = 0; i < x.length; i++) {
     x[i].style.display = "none";
   }
-  pages = document.getElementsByClassName("page");
+  tablinks = document.getElementsByClassName("tablink");
   for (i = 0; i < x.length; i++) {
-    pages[i].className = pages[i].className.replace("active", "");
+    tablinks[i].className = tablinks[i].className.replace(" w3-dark-grey", "");
   }
   document.getElementById(menuName).style.display = "block";
-  evt.currentTarget.firstElementChild.className += " active";
+  evt.currentTarget.firstElementChild.className += " w3-dark-grey";
 }
+document.getElementById("myLink").click();
 </script>
 
 </html>
