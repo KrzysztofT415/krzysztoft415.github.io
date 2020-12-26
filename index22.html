@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<title>Krzysztof Tałałaj</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata">
+<link rel="stylesheet" href="style22.css">
+
+<style>
+
+.menu {
+  display: none;
+}
+
+#main, * {
+  z-index: 1;
+  background-color: transparent;
+}
+
+#particles-js, #cnvs {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #000000;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 50%;
+  z-index: 0;
+}
+</style>
+
+<body>
+  <div id="particles-js"></div>
+  <script src="particles/particles.js"></script>
+
+  <div class="navbar">
+    <div style='background-color:transparent!important; padding:8px 16px!important'>
+      <div style='float:left; width:24.99999%'>
+        <a onclick="openMenu(event, 'Home');" style="color: #FFFFFF" id="myLink">
+          <div class="w3-button tablink" style='display:block;width:100%;'>Home</div>
+        </a>
+      </div>
+      <div style='float:left; width:24.99999%'>
+        <a onclick="openMenu(event, 'About');">
+          <div class="w3-button tablink" style="display:block;width:100%;color: #FFFFFF">About Me</div>
+        </a>
+      </div>
+      <div style='float:left; width:24.99999%'>
+        <a onclick="openMenu(event, 'Passions');">
+          <div class="w3-button tablink" style="display:block;width:100%;color: #FFFFFF">My Passions</div>
+        </a>
+      </div>
+      <div style='float:left; width:24.99999%'>
+        <a onclick="openMenu(event, 'Projects');">
+          <div class="w3-button tablink" style="display:block;width:100%;color: #FFFFFF">My Projects</div>
+        </a>
+      </div>
+    </div>
+  </div>
+
+    <!-- Add a background color and large text to the whole page -->
+    <div class="w3-blue w3-grayscale w3-large">
+
+    <!-- Menu Container -->
+    <div class="w3-container" id="menu">
+      <div class="w3-content" style="max-width:700px">
+    
+        <div id="Home" style="color: #FFFFFF" class="w3-container menu w3-padding-48 w3-card">       
+        home 
+        </div>
+
+        <div id="About" style="color: #FFFFFF" class="w3-container menu w3-padding-48 w3-card">
+        about
+        </div>  
+
+        <div id="Passions" style="color: #FFFFFF" class="w3-container menu w3-padding-48 w3-card">
+        passions
+        </div>  
+
+        <div id="Projects" style="color: #FFFFFF" class="w3-container menu w3-padding-48 w3-card">
+        projects
+        </div>  
+      </div>
+    </div>
+
+    <!-- End page content -->
+    </div>
+
+    <!-- Footer -->
+    <footer class="w3-center w3-light-grey w3-padding-48 w3-large">
+      <p id="copyright">Copyright © Krzysztof Tałałaj</p>
+      <p>Currently in development</p>
+    </footer>
+  </div>
+</body>
+
+<script>
+window.onload = () => {
+  document.getElementById('development').innerText += ` ${new Date().getFullYear()}`;
+  document.getElementById("language").click();
+  document.getElementById("firstpage").click();
+};
+
+function isMobileDevice() {
+    var check = false;
+    (function(a){if(/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elaine|fennec|hiptop|iemobile|ip(hone|od)|iris|kindle|lge |maemo|midp|mmp|mobile.+firefox|netfront|opera m(ob|in)i|palm( os)?|phone|p(ixi|re)\/|plucker|pocket|psp|series(4|6)0|symbian|treo|up\.(browser|link)|vodafone|wap|windows ce|xda|xiino/i.test(a)||/1207|6310|6590|3gso|4thp|50[1-6]i|770s|802s|a wa|abac|ac(er|oo|s\-)|ai(ko|rn)|al(av|ca|co)|amoi|an(ex|ny|yw)|aptu|ar(ch|go)|as(te|us)|attw|au(di|\-m|r |s )|avan|be(ck|ll|nq)|bi(lb|rd)|bl(ac|az)|br(e|v)w|bumb|bw\-(n|u)|c55\/|capi|ccwa|cdm\-|cell|chtm|cldc|cmd\-|co(mp|nd)|craw|da(it|ll|ng)|dbte|dc\-s|devi|dica|dmob|do(c|p)o|ds(12|\-d)|el(49|ai)|em(l2|ul)|er(ic|k0)|esl8|ez([4-7]0|os|wa|ze)|fetc|fly(\-|_)|g1 u|g560|gene|gf\-5|g\-mo|go(\.w|od)|gr(ad|un)|haie|hcit|hd\-(m|p|t)|hei\-|hi(pt|ta)|hp( i|ip)|hs\-c|ht(c(\-| |_|a|g|p|s|t)|tp)|hu(aw|tc)|i\-(20|go|ma)|i230|iac( |\-|\/)|ibro|idea|ig01|ikom|im1k|inno|ipaq|iris|ja(t|v)a|jbro|jemu|jigs|kddi|keji|kgt( |\/)|klon|kpt |kwc\-|kyo(c|k)|le(no|xi)|lg( g|\/(k|l|u)|50|54|\-[a-w])|libw|lynx|m1\-w|m3ga|m50\/|ma(te|ui|xo)|mc(01|21|ca)|m\-cr|me(rc|ri)|mi(o8|oa|ts)|mmef|mo(01|02|bi|de|do|t(\-| |o|v)|zz)|mt(50|p1|v )|mwbp|mywa|n10[0-2]|n20[2-3]|n30(0|2)|n50(0|2|5)|n7(0(0|1)|10)|ne((c|m)\-|on|tf|wf|wg|wt)|nok(6|i)|nzph|o2im|op(ti|wv)|oran|owg1|p800|pan(a|d|t)|pdxg|pg(13|\-([1-8]|c))|phil|pire|pl(ay|uc)|pn\-2|po(ck|rt|se)|prox|psio|pt\-g|qa\-a|qc(07|12|21|32|60|\-[2-7]|i\-)|qtek|r380|r600|raks|rim9|ro(ve|zo)|s55\/|sa(ge|ma|mm|ms|ny|va)|sc(01|h\-|oo|p\-)|sdk\/|se(c(\-|0|1)|47|mc|nd|ri)|sgh\-|shar|sie(\-|m)|sk\-0|sl(45|id)|sm(al|ar|b3|it|t5)|so(ft|ny)|sp(01|h\-|v\-|v )|sy(01|mb)|t2(18|50)|t6(00|10|18)|ta(gt|lk)|tcl\-|tdg\-|tel(i|m)|tim\-|t\-mo|to(pl|sh)|ts(70|m\-|m3|m5)|tx\-9|up(\.b|g1|si)|utst|v400|v750|veri|vi(rg|te)|vk(40|5[0-3]|\-v)|vm40|voda|vulc|vx(52|53|60|61|70|80|81|83|85|98)|w3c(\-| )|webc|whit|wi(g |nc|nw)|wmlb|wonu|x700|yas\-|your|zeto|zte\-/i.test(a.substr(0,4))) check = true;})(navigator.userAgent||navigator.vendor||window.opera);
+    return check;
+};
+
+if (!isMobileDevice() || true) {
+  document.getElementById("cnvs").style.display = "none";
+  particlesJS.load('particles-js', 'particles/particles.json'); }
+else { 
+  document.getElementById("particles-js").style.display = "none";
+  let cnvs = document.getElementById('cnvs');
+  cnvs.width = screen.width * 3;
+  cnvs.height = screen.height * 3;
+  let ctx = cnvs.getContext('2d');
+
+  let particles = new Array(50);
+  for (let i = 0; i < particles.length; i++) {
+    particles[i] = new Particle(cnvs.width, cnvs.height); }
+
+  let counter = 0;
+  let totalFrames = 1500;
+  let perlin = new Perlin();
+
+  function render() {
+    ctx.fillStyle = 'rgb(0,0,0)';
+    ctx.fillRect(0,0,cnvs.width,cnvs.height);
+    let percent = (counter % totalFrames) / totalFrames;
+    let a = percent * Math.PI * 2;
+    for (let p of particles) {
+      let x = p.xNoise.value(a, perlin);
+      let y = p.yNoise.value(a, perlin);
+      let d = p.dNoise.value(a, perlin) / 5;
+      let r = p.rNoise.value(a, perlin);
+      let g = p.gNoise.value(a, perlin);
+      let b = p.bNoise.value(a, perlin);
+      ctx.beginPath();
+      ctx.arc(x, y, d, 0, 2 * Math.PI, false);
+      ctx.fillStyle = 'rgba('+r+','+g+','+b+', 50%)';
+      ctx.fill();
+    }
+    counter ++;
+    window.requestAnimationFrame(render);
+  }
+  window.requestAnimationFrame(render);
+ }
+
+function toggleLanguage() {
+  let about = document.getElementById('about');
+  let description = document.getElementById('description');
+  let passions = document.getElementById("passions");
+  let project = document.getElementById("project");
+  let language = document.getElementById("language");
+
+  if (language.innerText == 'English') {
+    about.innerHTML = 'Student informatyki algorytmicznej na Politechnice Wroc&#322;awskiej';
+    description.innerHTML = 'hej polska - tba';
+    passions.innerHTML = 'hula polska - tba';
+    project.innerHTML = 'hop polska - tba';
+    language.innerText = 'Polski';
+  }
+  else {
+    about.innerHTML = 'IT student at Wroc&#322;aw University of Science and Technology.';
+    description.innerHTML = 'hej england - tba';
+    passions.innerHTML = 'hula england - tba';
+    project.innerHTML = 'hop england - tba';
+    language.innerText = 'English';
+  }
+}
+
+// Tabbed Menu
+function openMenu(evt, menuName) {
+  var i, x, tablinks;
+  x = document.getElementsByClassName("menu");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < x.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" w3-dark-grey", "");
+  }
+  document.getElementById(menuName).style.display = "block";
+  evt.currentTarget.firstElementChild.className += " w3-dark-grey";
+}
+document.getElementById("myLink").click();
+</script>
+
+</html>

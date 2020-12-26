@@ -1,148 +1,128 @@
-body {
-    margin: 0;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -khtml-user-select: none;
-    -ms-user-select: none;
-    color: rgb(28, 28, 30);
-  }
-  
-  a {
-    color: #05668D;
-    -ms-transition: color 0.5s;
-    -webkit-transition: color 0.5s;
-    transition: color 0.5s;
-    text-decoration: none;
-  }
-  
-  a:hover {
-    color: #085370;
-    cursor: pointer;
-  }
+:root {
+    --green: #8bc34a;
+    --red: #f44336;
+    --brown: #5d4037;
 
-  .active {
-    color: #EFCB68;
-  }
-  
-  p {
-    z-index: 1;
-    font-size: 18px;
+    --secondaryLE: #9fffff;
+    --secondaryL: #67daff;
+    --secondaryM: #01a9f4;
+    --secondaryD: #007ac1;
+
+    --primaryL: #9162e4;
+    --primaryM: #5e35b1;
+    --primaryD: #280680;
+
+    --white: #eceff1;
+    --whiteD: #babdbe;
+    --darkL: #61656d;
+    --darkM: #373b42;
+    --darkD: #11151b;
+}
+
+* {
     margin: 0;
     padding: 0;
-  }
-  
-  #particles-js, #cnvs {
-    position: absolute;
+    box-sizing: border-box;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 15px;
+}
+
+#particles-js {
+    position: fixed;
     width: 100%;
     height: 100%;
-    background-color: #000000;
+    background-color: var(--darkD);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: 50% 50%;
     z-index: 0;
-  }
-  
-  #main {
+}
+
+#body {
+    display: block;
+    position: fixed;
     height: 100%;
-  }
-  
-  #nameContainer {
-    position: absolute;
-    z-index: 1;
-    margin: 0;
-    padding: 0;
-    top: 20%;
-    left: 10%;
-    width: 355px;
-    height: 120px;
-  }
-  
-  #name {
-    color: #FFFFFF;
-    position: absolute;
-    z-index: 1;
-    font-size: 2.5em;
-    left: 0%;
-    font-family: 'Ubuntu', sans-serif;
-  }
-  
-  #about {
-    color: #FFFFFF;
-    position: absolute;
-    z-index: 1;
-    font-size: 1.25em;
-    top: 40%;
-    left: 0%;
-  }
-  
-  #icons {
-    position: absolute;
-    bottom: 0%;
-    right: 3%;
-    margin: 0;
-    padding: 0;
-  }
-  
-  ul > li {
-    display: inline-block;
-    list-style: none;
-    position: relative;
-    z-index: 1;
-    padding: 0 4px 0 4px;
-  }
-  
-  ul > li > a > img {
-    width: 1.6vw;
+    width: 100%;
+}
+
+#nav-links {
+    height: 5vh;
+    background-color: transparent;
+    margin: 8px 16px;
+}
+
+.nav-link {
     cursor: pointer;
-  }
-  
-  #icons > li > a > img {
-    width: 30px;
-  }
-  
-  ul > li > a > img:hover {
-    transform: scale(1.1);
-  }
+    display: flex;
+    width: 24.99%;
+    height: 5vh;
+    float: left;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+    color: var(--white);
+    background-color: transparent;
+}
 
-  #development {
-    color: #FFFFFF;
-    position: absolute;
-    bottom: 5px;
-    right: 5px;
-    margin: 0 auto;
-    font-size: 12px;
-  }
+.nav-link.active {
+    background-color: var(--darkL);
+}
 
-  #language {
-    color: #05668D;
-    position: absolute;
-    top: 5px;
-    left: 5px;
-    margin: 0 auto;
-    font-size: 22px;
-    font-weight: bold;
-  }
+.nav-link:hover{
+    color: var(--darkD);
+    background-color: var(--whiteD);
+}
 
-  #language:hover {
-    color: #085370;
+#my-links {
+    position: static;
+    height: 5vh;
+    bottom: 0;
+    background-color: transparent;
+    margin: 8px 16px;
+}
+
+.my-link {
     cursor: pointer;
-    transform: scale(1.2);
-  }
-  
-  #menuContainer {
-    color: #FFFFFF;
-    position: absolute;
-    top: 45%;
-    left: 0%;
-    width: 35%;
-    font-size: 26px;
-    font-weight: bolder;
-  }
+    display: flex;
+    height: 5vh;
+    float: right;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+    color: var(--white);
+    background-color: transparent;
+    padding: 10px;
+}
 
-  .menu {
-    color: #FFFFFF;
-    position: absolute;
-    top: 20%;
-    left: 400px;
-    width: 300px;
-  }
+.my-link a img{
+    width: 5vh;
+}
+
+.hidden {
+    display: none;
+}
+
+#sections {
+    display: block;
+    overflow-y: scroll;
+    width: 100%;
+    height: 80%;
+    background-color: transparent;
+    margin: 24px 16px;
+}
+
+#sections::-webkit-scrollbar {
+    display: none;
+}
+
+section {
+    display: none;
+}
+
+section.active {
+    display: block;
+}
+
+.home {
+    color: white;
+}

@@ -1,0 +1,148 @@
+body {
+    margin: 0;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -ms-user-select: none;
+    color: rgb(28, 28, 30);
+  }
+  
+  a {
+    color: #05668D;
+    -ms-transition: color 0.5s;
+    -webkit-transition: color 0.5s;
+    transition: color 0.5s;
+    text-decoration: none;
+  }
+  
+  a:hover {
+    color: #085370;
+    cursor: pointer;
+  }
+
+  .active {
+    color: #EFCB68;
+  }
+  
+  p {
+    z-index: 1;
+    font-size: 18px;
+    margin: 0;
+    padding: 0;
+  }
+  
+  #particles-js, #cnvs {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #000000;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 50%;
+    z-index: 0;
+  }
+  
+  #main {
+    height: 100%;
+  }
+  
+  #nameContainer {
+    position: absolute;
+    z-index: 1;
+    margin: 0;
+    padding: 0;
+    top: 20%;
+    left: 10%;
+    width: 355px;
+    height: 120px;
+  }
+  
+  #name {
+    color: #FFFFFF;
+    position: absolute;
+    z-index: 1;
+    font-size: 2.5em;
+    left: 0%;
+    font-family: 'Ubuntu', sans-serif;
+  }
+  
+  #about {
+    color: #FFFFFF;
+    position: absolute;
+    z-index: 1;
+    font-size: 1.25em;
+    top: 40%;
+    left: 0%;
+  }
+  
+  #icons {
+    position: absolute;
+    bottom: 0%;
+    right: 3%;
+    margin: 0;
+    padding: 0;
+  }
+  
+  ul > li {
+    display: inline-block;
+    list-style: none;
+    position: relative;
+    z-index: 1;
+    padding: 0 4px 0 4px;
+  }
+  
+  ul > li > a > img {
+    width: 1.6vw;
+    cursor: pointer;
+  }
+  
+  #icons > li > a > img {
+    width: 30px;
+  }
+  
+  ul > li > a > img:hover {
+    transform: scale(1.1);
+  }
+
+  #development {
+    color: #FFFFFF;
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+    margin: 0 auto;
+    font-size: 12px;
+  }
+
+  #language {
+    color: #05668D;
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    margin: 0 auto;
+    font-size: 22px;
+    font-weight: bold;
+  }
+
+  #language:hover {
+    color: #085370;
+    cursor: pointer;
+    transform: scale(1.2);
+  }
+  
+  #menuContainer {
+    color: #FFFFFF;
+    position: absolute;
+    top: 45%;
+    left: 0%;
+    width: 35%;
+    font-size: 26px;
+    font-weight: bolder;
+  }
+
+  .menu {
+    color: #FFFFFF;
+    position: absolute;
+    top: 20%;
+    left: 400px;
+    width: 300px;
+  }
