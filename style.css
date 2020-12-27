@@ -27,6 +27,10 @@
     font-size: 15px;
 }
 
+a {
+    text-align: center;
+}
+
 #particles-js {
     position: fixed;
     width: 100%;
@@ -117,6 +121,7 @@
 
 section {
     display: none;
+    color: white;
 }
 
 section.active {
@@ -124,5 +129,5 @@ section.active {
 }
 
 .home {
-    color: white;
+    color: gray;
 }
