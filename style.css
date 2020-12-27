@@ -1,8 +1,12 @@
+/* DEFAULTS */
+
 :root {
     --green: #8bc34a;
     --red: #f44336;
     --brown: #5d4037;
 
+    --background: rgba(159,255,255,0.3);
+    --background2: rgba(1,169,244,0.4);
     --secondaryLE: #9fffff;
     --secondaryL: #67daff;
     --secondaryM: #01a9f4;
@@ -25,11 +29,23 @@
     box-sizing: border-box;
     font-family: 'Ubuntu', sans-serif;
     font-size: 15px;
+
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -o-user-select: none;
+    user-select: none;
 }
 
 a {
     text-align: center;
 }
+
+.hidden {
+    display: none;
+}
+
+/* TWO MAIN PARTS OF VIEW */
 
 #particles-js {
     position: fixed;
@@ -45,9 +61,11 @@ a {
 #body {
     display: block;
     position: fixed;
-    height: 100%;
     width: 100%;
+    height: 100%;
 }
+
+/* LINKS ON NAVIGATION BAR PART */
 
 #nav-links {
     height: 5vh;
@@ -69,13 +87,15 @@ a {
 }
 
 .nav-link.active {
-    background-color: var(--darkL);
+    background-color: var(--background);
 }
 
 .nav-link:hover{
-    color: var(--darkD);
-    background-color: var(--whiteD);
+    color: var(--whiteD);
+    background-color: var(--background2);
 }
+
+/* LINKS ON BOTTOM PART */
 
 #my-links {
     position: static;
@@ -102,14 +122,11 @@ a {
     width: 5vh;
 }
 
-.hidden {
-    display: none;
-}
+/* SECTIONS PART */
 
 #sections {
     display: block;
     overflow-y: scroll;
-    width: 100%;
     height: 80%;
     background-color: transparent;
     padding-left: 16px;
@@ -131,9 +148,19 @@ section.active {
     display: block;
 }
 
+/* HOME SECTION */
+
 .home {
     position: relative;
-    top: 70%;
+    top: 90%;
+}
+
+.home div {
+    position: absolute;
+    bottom: 0;
+    width: fit-content;
+    padding: 12px;
+    background-color: var(--background);
 }
 
 .home h1 {
@@ -144,5 +171,6 @@ section.active {
 
 .home a {
     font-size: 25px;
-    color: var(--white);
 }
+
+/* ABOUT ME SECTION */
