@@ -5,7 +5,7 @@
     --red: #f44336;
     --brown: #5d4037;
 
-    --background: rgba(159,255,255,0.3);
+    --background: rgba(159, 255, 255, 0.3);
     --background2: rgba(1, 169, 244, 0.4);
     --background3: rgba(1, 169, 244, 0.6);
     --secondaryLE: #9fffff;
@@ -91,7 +91,7 @@ a {
     background-color: var(--background2);
 }
 
-.nav-link:hover{
+.nav-link:not(.disabled):hover {
     color: var(--whiteD);
     background-color: var(--background);
 }
@@ -125,8 +125,13 @@ a {
     padding: 10px;
 }
 
-.my-link a img{
+.my-link a img {
     width: 5vh;
+}
+
+.my-link:hover {
+    color: var(--whiteD);
+    background-color: var(--background);
 }
 
 /* SECTIONS PART */
@@ -142,10 +147,6 @@ a {
     margin-bottom: 24px;
 }
 
-#sections::-webkit-scrollbar {
-    display: none;
-}
-
 section {
     display: none;
     color: var(--white);
@@ -155,6 +156,10 @@ section.active {
     display: flex;
     float: top;
     flex-flow: row wrap;
+}
+
+#sections::-webkit-scrollbar {
+    display: none;
 }
 
 /* HOME SECTION */
@@ -184,8 +189,29 @@ section.active {
 
 /* PROJECTS SECTION */
 
+#sections:has(.projects.active) {
+    border-width: 1px 0;
+    border-color: var(--secondaryM);
+    border-style: solid;
+}
+
+#sections:has(.projects.active)::-webkit-scrollbar {
+    display: block;
+    width: 12px;
+}
+
+#sections:has(.projects.active)::-webkit-scrollbar-track {
+    background: var(--secondaryM);
+}
+
+#sections:has(.projects.active)::-webkit-scrollbar-thumb {
+    background-color: var(--primaryD);
+    border-radius: 20px;
+    border: 1px solid var(--whiteD);
+}
+
 .projects article {
-    width: fit-content;
+    width: 56vw;
     background-color: var(--background3);
     margin: 20px;
     object-fit: cover;
@@ -193,7 +219,7 @@ section.active {
 
 .projects article figure {
     display: block;
-    width: 60%;
+    width: 30vw;
     float: left;
     padding: 10px;
     object-fit: contain;

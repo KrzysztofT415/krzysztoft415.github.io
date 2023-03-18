@@ -1,125 +1,155 @@
 <!DOCTYPE html>
-<html lang='en'>
+<html lang="en">
     <head>
-        <meta charset='UTF-8' />
-        <meta name='viewport' content='width=device-width, initial-scale=1.0' />
-        <meta http-equiv='X-UA-Compatible' content='ie=edge' />
-        <link rel='stylesheet' href='style.css' />
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <link rel="stylesheet" href="style.css" />
         <title>Portfolio - Krzysztof Tałałaj</title>
     </head>
     <body>
+        <div id="particles-js"></div>
+        <div id="body">
+            <div id="nav-links">
+                <ul class="nav-links-list">
+                    <li class="nav-link active" onclick='openMenu(event, "home")'>
+                        <a class="en">Home</a>
+                        <a class="pl">Strona Główna</a>
+                    </li>
+                    <li class="nav-link disabled"></li>
+                    <li class="nav-link disabled"></li>
+                    <!-- <li class="nav-link disabled" onclick='openMenu(event, "about")'>
+                        <a class="en">About Me</a>
+                        <a class="pl">O mnie</a>
+                    </li>
+                    <li class="nav-link" onclick='openMenu(event, "passions")'>
+                        <a class="en">My passions</a>
+                        <a class="pl">Moje pasje</a>
+                    </li> -->
+                    <li class="nav-link" onclick='openMenu(event, "projects")'>
+                        <a class="en">My projects</a>
+                        <a class="pl">Moje projekty</a>
+                    </li>
+                </ul>
+            </div>
 
-    <div id='particles-js'></div>
-    <div id='body'>
-        <div id='nav-links'><ul class='nav-links-list'>
-            <li class='nav-link active' onclick='openMenu(event, "home")'>
-                <a class='en'>Home</a>
-                <a class='pl'>Strona Główna</a>
-            </li>
-            <li class='nav-link' onclick='openMenu(event, "about")'>
-                <a class='en'>About Me</a>
-                <a class='pl'>O mnie</a>
-            </li>
-            <li class='nav-link' onclick='openMenu(event, "passions")'>
-                <a class='en'>My passions</a>
-                <a class='pl'>Moje pasje</a>
-            </li>
-            <li class='nav-link' onclick='openMenu(event, "projects")'>
-                <a class='en'>My projects</a>
-                <a class='pl'>Moje projekty</a>
-            </li>
-        </ul></div>
+            <div id="sections">
+                <section class="home active">
+                    <div>
+                        <!--  image of me  -->
+                        <h1>Krzysztof Tałałaj</h1>
+                        <p class="en"><a>fourth-year student of Algorithmic Computer Science</a><br /><a>Specialization in Cryptography and Computer Security</a></p>
+                        <p class="pl"><a>Student Informatyki Algorytmicznej</a><br /><a>obecnie na czwartym roku</a><br /><a>na specjalizacji Kryptografia i Bezpieczeństwo Komputerowe</a></p>
+                    </div>
+                </section>
+                <section class="about">
+                    <h1 class="en">about TBA</h1>
+                    <h1 class="pl">o mnie TBA</h1>
+                </section>
+                <section class="passions">
+                    <h1 class="en">passions TBA</h1>
+                    <h1 class="pl">pasje TBA</h1>
+                </section>
+                <section class="projects">
+                    <article>
+                        <h1>Maze Creator</h1>
 
-        <div id='sections'>
-            <section class='home active'>
-                <div>
-                    <!--  image of me  -->
-                    <h1>Krzysztof Tałałaj</h1>
-                    <p class='en'><a>second-year student of Algorithmic Computer Science</a></p>
-                    <p class='pl'><a>Student Informatyki Algorytmicznej</a><br><a>obecnie na drugim roku</a></p>
-                </div>
-            </section>
-            <section class='about'>
-                <h1 class='en'>about TBA</h1>
-                <h1 class='pl'>o mnie TBA</h1>
-            </section>
-            <section class='passions'>
-                <h1 class='en'>passions TBA</h1>
-                <h1 class='pl'>pasje TBA</h1>
-            </section>
-            <section class='projects'>
+                        <figure id="image1">
+                            <img src="assets/MazeCreator.png" alt="missing image" />
+                        </figure>
 
-                <article>
-                    <h1>Maze Creator</h1>
+                        <p>
+                            <a class="en">It is a website, which purpose is drawing and generating mazes and visualization of these steps.<br /><br /></a>
+                            <a class="pl">Jest to stona internetowa, której celem jest rysowanie i generowanie labiryntów oraz wizualizacja tych procesów.<br /><br /></a>
 
-                    <figure id='image1'>
-                        <img src="assets/MazeCreator.png" alt='missing image'>
-                    </figure>
+                            <a class="en">
+                                User is able to draw any shape of board and then pick one of algorithms to generate maze. Afterwards website is displaying process of generation.<br />
+                                Written entirely in pure HTML, CSS and JS.
+                            </a>
+                            <a class="pl"> Użytkownik może stworzyć własną planszę poprzez narysowanie komórek - sześciokątów. Następnie można obejrzeć proces, podczas którego<br />generowany jest labirynt za pomocą wybranego algorytmu.<br /> </a>
 
-                    <p>
-                        <a class='en'>It is a website, which purpose is drawing and generating mazes and visualization of these steps.<br><br></a>
-                        <a class='pl'>Jest to stona internetowa, której celem jest rysowanie i generowanie labiryntów oraz wizualizacja tych procesów.<br><br></a>
+                            <a class="en"><br /><br />Try it here:</a>
+                            <a class="pl"><br /><br />Wypróbuj tutaj:</a>
+                            <a href="https://krzysztoft415.github.io/P.MazeCreatorWebsite/" style="color: var(--secondaryLE); text-decoration: underline">MazeCreatorWebsite</a>
 
-                        <a class='en'>
-                            User is able to draw any shape of board and then pick one of algorithms to generate maze.
-                            Afterwards website is displaying process of generation.<br>
-                            Written entirely in pure HTML, CSS and JS.
-                        </a>
-                        <a class='pl'>
-                            Użytkownik może stworzyć własną planszę poprzez narysowanie komórek - sześciokątów.
-                            Następnie można obejrzeć proces, podczas którego generowany jest labirynt za pomocą wybranego algorytmu.<br>
-                        </a>
+                            <a class="en"><br /><br />Github repository:</a>
+                            <a class="pl"><br /><br />Repozytorium:</a>
+                            <a href="https://github.com/KrzysztofT415/P.MazeCreatorWebsite" style="color: var(--secondaryLE); text-decoration: underline">ParticleLoop</a>
+                        </p>
+                    </article>
 
-                        <a class='en'><br><br>Try it here:</a>
-                        <a class='pl'><br><br>Wypróbuj tutaj:</a>
-                        <a href='https://krzysztoft415.github.io/P.MazeCreatorWebsite/' style='color: var(--secondaryLE); text-decoration: underline'>MazeCreatorWebsite</a>
-                    </p>
+                    <article>
+                        <h1>Chinese Checkers</h1>
 
-                </article>
+                        <figure id="image2">
+                            <img src="assets/Loading.png" alt="missing image" />
+                        </figure>
 
-                <article>
-                    <h1>Chinese Checkers</h1>
+                        <p>
+                            <a class="en">It is a university assignment, which is game application to play chinese checkers online with friends.<br /><br /></a>
+                            <a class="pl">Jest to aplikacja, przeznaczona do gry w chińskie warcaby (Trylmę) ze znajomymi przez internet.<br /><br /></a>
 
-                    <figure id='image2'>
-                        <img src="assets/Loading.png" alt='missing image'>
-                    </figure>
+                            <a class="en">
+                                User is able to connect to server via IP and play a game with others.<br />
+                                Server is also connected to database to store all games.<br />
+                                It is also possible to see a game from this database.
+                            </a>
+                            <a class="pl">
+                                Użytkownik może połączyć się do serwera poprzez IP i zagrać w warcaby z innymi.<br />
+                                Serwer ponadto jest połączony do bazy danych, w której przechowuje informacje o rozgrywkach.<br />
+                                Możliwe jest również obejrzenie gry z bazy.
+                            </a>
 
-                    <p>
-                        <a class='en'>It is a university assignment, which is game application to play chinese checkers online with friends.<br><br></a>
-                        <a class='pl'>Jest to aplikacja, przeznaczona do gry w chińskie warcaby (Trylmę) ze znajomymi przez internet.<br><br></a>
+                            <a class="en"><br /><br />Github repository:</a>
+                            <a class="pl"><br /><br />Repozytorium:</a>
+                            <a href="https://github.com/KrzysztofT415/U.ChineseCheckers" style="color: var(--secondaryLE); text-decoration: underline">ChineseCheckers</a>
+                        </p>
+                    </article>
 
-                        <a class='en'>
-                            User is able to connect to server via IP and play a game with others.<br>
-                            Server is also connected to database to store all games.<br>
-                            It is also possible to see a game from this database.
-                        </a>
-                        <a class='pl'>
-                            Użytkownik może połączyć się do serwera poprzez IP i zagrać w warcaby z innymi.<br>
-                            Serwer ponadto jest połączony do bazy danych, w której przechowuje informacje o rozgrywkach.<br>
-                            Możliwe jest również obejrzenie gry z bazy.
-                        </a>
+                    <article>
+                        <h1>ParticleLoop</h1>
 
-                        <a class='en'><br><br>Github repository:</a>
-                        <a class='pl'><br><br>Repozytorium:</a>
-                        <a href='https://github.com/KrzysztofT415/U.ChineseCheckers' style='color: var(--secondaryLE); text-decoration: underline'>ChineseCheckers</a>
-                    </p>
+                        <figure id="image3">
+                            <img src="assets/loop.png" alt="missing image" />
+                        </figure>
 
-                </article>
+                        <p>
+                            <a class="en">It is a small website with continuous loop of flying particles. There are two color schemes<br /><br /></a>
+                            <a class="pl">Jest to mała strona internetowa wyświetlająca nieskończoną pętlę latających cząstek. Możliwe są dwa różne schematy kolorystyczne.<br /><br /></a>
 
-            </section>
+                            <a class="en">It was my first attempt on web animations, so it is not really well optimised :P</a>
+                            <a class="pl">Była to moja pierwsza styczność z animowaniem, więc nie jest zbytnio zoptymalizowana :P</a>
+
+                            <a class="en"><br /><br />Try it here:</a>
+                            <a class="pl"><br /><br />Wypróbuj tutaj:</a>
+                            <a href="https://krzysztoft415.github.io/P.ParticleLoop/" style="color: var(--secondaryLE); text-decoration: underline">MazeCreatorWebsite</a>
+
+                            <a class="en"><br /><br />Github repository:</a>
+                            <a class="pl"><br /><br />Repozytorium:</a>
+                            <a href="https://github.com/KrzysztofT415/P.ParticleLoop" style="color: var(--secondaryLE); text-decoration: underline">ParticleLoop</a>
+                        </p>
+                    </article>
+                </section>
+            </div>
+
+            <div id="my-links">
+                <ul id="my-links-list">
+                    <a style="color: white">Website in development :). ©</a>
+                    <li class="my-link">
+                        <a draggable="false" href="https://github.com/KrzysztofT415"><img draggable="false" src="assets/github.svg" alt="GitHub" /></a>
+                    </li>
+                    <li class="my-link">
+                        <a draggable="false" href="https://www.linkedin.com/in/krzysztoftalalaj"><img draggable="false" src="assets/linkedin.svg" alt="LinkedIn" /></a>
+                    </li>
+                    <li class="my-link">
+                        <a draggable="false" href="mailto:krzysztoft415@gmail.com"><img draggable="false" src="assets/email.svg" alt="Email" /></a>
+                    </li>
+                    <li class="my-link" id="language" onclick="changeLanguage()"><a>Change language</a></li>
+                </ul>
+            </div>
         </div>
 
-
-        <div id='my-links'><ul id='my-links-list'>
-            <a style='color: white'>Website in development. ©</a>
-            <li class='my-link'><a draggable='false' href='https://github.com/KrzysztofT415'><img draggable='false' src='assets/github.svg' alt='GitHub'/></a></li>
-            <li class='my-link'><a draggable='false' href='https://www.linkedin.com/in/krzysztoftalalaj'><img draggable='false' src='assets/linkedin.svg' alt='LinkedIn'/></a></li>
-            <li class='my-link'><a draggable='false' href='mailto:krzysztoft415@gmail.com'><img draggable='false' src='assets/email.svg' alt='Email'/></a></li>
-            <li class='my-link' id='language' onclick="changeLanguage()"><a>Language</a></li>
-        </ul></div>
-    </div>
-
-    <script src='particles/particles.js'></script>
-    <script src='script.js'></script>
+        <script src="particles/particles.js"></script>
+        <script src="script.js"></script>
     </body>
 </html>
